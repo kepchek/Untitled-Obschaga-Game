@@ -14,7 +14,12 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public float timeStart = 60;
+    public static void AddTenSec()
+    {
+        timeStart += 10;
+    }
+
+    public static float timeStart = 60;
     public Text timerText;
     void Start()
     {
