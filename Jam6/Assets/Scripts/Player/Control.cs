@@ -21,6 +21,6 @@ public class Control : MonoBehaviour
     {
         movevector.x = Input.GetAxisRaw("Horizontal");
         movevector.z = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector3(movevector.x * speed, 0 , movevector.z * speed); 
+        rb.velocity = new Vector3(movevector.x * speed, 0 , movevector.z * speed);
     }
 }
