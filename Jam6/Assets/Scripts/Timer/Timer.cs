@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    protected float timeStart = 60;
+    public float timeStart = 60;
     public Text timerText;
     void Start()
     {
@@ -25,4 +25,5 @@ public class Timer : MonoBehaviour
     {
         TimerOut();
     }
+    
 }
