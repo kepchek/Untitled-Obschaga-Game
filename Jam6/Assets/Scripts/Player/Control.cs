@@ -31,7 +31,7 @@ public class Control : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log(InteractTrigger.MiniGameKey);
+                
             }
         }
     }

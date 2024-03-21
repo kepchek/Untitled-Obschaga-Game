@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class InteractTrigger : MonoBehaviour
 {
-    [SerializeField] public static int MiniGameKey = 1;
+    [SerializeField] public int MiniGameKey;
     public static bool PlayerInRange;
     void Awake() 
     {
         PlayerInRange = false;
-    }
-    private void Update() 
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -30,6 +26,11 @@ public class InteractTrigger : MonoBehaviour
             PlayerInRange = false;
             Debug.Log("Player out of range");
         }
+    }
+
+    public static void ChooseMinigame()
+    {
+        
     }
 
 }
