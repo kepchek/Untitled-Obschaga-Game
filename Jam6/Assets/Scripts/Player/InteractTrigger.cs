@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InteractTrigger : MonoBehaviour
 {
-    public bool PlayerInRange;
+    [SerializeField] public static int MiniGameKey;
+    public static bool PlayerInRange;
     void Awake() 
     {
         PlayerInRange = false;
@@ -14,8 +15,21 @@ public class InteractTrigger : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) {
-        
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            PlayerInRange = true;
+            Debug.Log("Player in range");
+        }
+    }
+    private void OnTriggerExit(Collider other) 
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            PlayerInRange = false;
+            Debug.Log("Player out of range");
+        }
     }
 
 }

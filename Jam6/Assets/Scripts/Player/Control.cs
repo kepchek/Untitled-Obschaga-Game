@@ -7,6 +7,7 @@ public class Control : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 5f;
     private Vector3 movevector;
+    bool _PlayerInRange;
 
     private void Start() 
     {
@@ -23,4 +24,16 @@ public class Control : MonoBehaviour
         movevector.z = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector3(movevector.x * speed, 0 , movevector.z * speed);
     }
+
+    void CheckForInteract()
+    {
+        if(InteractTrigger.PlayerInRange)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(InteractTrigger.MiniGameKey);
+            }
+        }
+    }
+    
 }
