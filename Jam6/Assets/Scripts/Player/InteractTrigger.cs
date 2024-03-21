@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractTrigger : MonoBehaviour
 {
-    [SerializeField] public static int MiniGameKey;
+    [SerializeField] public static int MiniGameKey = 1;
     public static bool PlayerInRange;
     void Awake() 
     {

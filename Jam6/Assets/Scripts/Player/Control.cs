@@ -7,7 +7,6 @@ public class Control : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 5f;
     private Vector3 movevector;
-    bool _PlayerInRange;
 
     private void Start() 
     {
@@ -16,6 +15,7 @@ public class Control : MonoBehaviour
     private void Update() 
     {
         Walk();
+        CheckForInteract();
     }
 
     void Walk()
