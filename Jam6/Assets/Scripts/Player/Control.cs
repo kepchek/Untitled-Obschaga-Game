@@ -6,7 +6,7 @@ public class Control : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 5f;
-    private Vector2 movevector;
+    private Vector3 movevector;
 
     private void Start() 
     {
@@ -14,13 +14,13 @@ public class Control : MonoBehaviour
     }
     private void Update() 
     {
-
+        Walk();
     }
 
     void Walk()
     {
         movevector.x = Input.GetAxisRaw("Horizontal");
-        movevector.y = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(movevector.x * speed, movevector.y * speed);
+        movevector.z = Input.GetAxisRaw("Vertical");
+        rb.velocity = new Vector3(movevector.x * speed, 0 , movevector.z * speed); 
     }
 }
