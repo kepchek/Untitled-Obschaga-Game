@@ -8,6 +8,8 @@ public class Control : MonoBehaviour
     [SerializeField] float speed = 5f;
     private Vector3 movevector;
 
+    public static bool ButtonClickedE;
+
     private void Start() 
     {
         
@@ -25,13 +27,13 @@ public class Control : MonoBehaviour
         rb.velocity = new Vector3(movevector.x * speed, 0 , movevector.z * speed);
     }
 
-    void CheckForInteract()
+    public void CheckForInteract()
     {
         if(InteractTrigger.PlayerInRange)
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                
+                ButtonClickedE = true;
             }
         }
     }
