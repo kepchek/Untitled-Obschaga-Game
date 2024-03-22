@@ -38,13 +38,14 @@ public class InteractTrigger : MonoBehaviour
         {
             switch(MiniGameKey)
                 {
-                    case(0):
+                    case 0:
+                        Debug.Log($"Choose minigame {MiniGameKey}");
+                        GameObject.Find("Minigame0").transform.GetChild(0).gameObject.SetActive(true);
+                        break;
+                    case 1:
                         Debug.Log($"Choose minigame {MiniGameKey}");
                         break;
-                    case(1):
-                        Debug.Log($"Choose minigame {MiniGameKey}");
-                        break;
-                    case(2):
+                    case 2:
                         Debug.Log($"Choose minigame {MiniGameKey}");
                         break;
                 }            
