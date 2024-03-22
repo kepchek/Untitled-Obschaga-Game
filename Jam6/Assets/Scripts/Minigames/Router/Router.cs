@@ -15,7 +15,7 @@ public class Router : MonoBehaviour
     public TMP_Text TxtWithIP;
 
     public GameObject ErrorTXT;
-    void Start()
+    void OnEnable()
     {
         cnvs.SetActive(true);
 
@@ -45,9 +45,10 @@ public class Router : MonoBehaviour
     {
         if(TxtWithIP.text == IpAddressField.text)
         {
+            BuffSystem.isBuffReady = true;
+            IpAddressField.text = "";
             cnvs.SetActive(false);
             ErrorTXT.SetActive(false);
-            
         }
         else
         {
