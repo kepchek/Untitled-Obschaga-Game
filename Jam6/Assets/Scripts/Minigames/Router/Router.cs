@@ -23,6 +23,8 @@ public class Router : MonoBehaviour
         RndIP = Random.Range(100000000, 999999999);
 
         TxtWithIP.text = RndIP.ToString("### ### ###").Replace(" ", ".");
+
+        IpAddressField.Select();
     }
 
     public void Click()
@@ -38,6 +40,7 @@ public class Router : MonoBehaviour
             IpAddressField.text = "";
         }
     }
+
 
     private void IpValueChanged(string svalue)
     {
