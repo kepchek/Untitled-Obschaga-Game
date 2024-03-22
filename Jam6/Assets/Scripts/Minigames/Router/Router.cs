@@ -18,9 +18,9 @@ public class Router : MonoBehaviour
 
         IpAddressField.onValueChanged.AddListener(IpValueChanged);
 
-        RndIP = Random.Range(1000, 5000);
+        RndIP = Random.Range(100000000, 999999999);
 
-        TxtWithIP.text = RndIP.ToString("##  (##)");
+        TxtWithIP.text = RndIP.ToString("### ### ###");
     }
 
     public void Click()
@@ -36,11 +36,14 @@ public class Router : MonoBehaviour
     {
         string snum = System.Text.RegularExpressions.Regex.Replace(svalue, @"[^0-9]", string.Empty) ?? string.Empty;
 
-        if (snum.Length > 12) snum = snum.Substring(0, 12);
+        if (snum.Length > 9)
+        { 
+            snum = snum.Substring(0, 9);
+        }
 
         if (snum.Length < 3)
         {
-            //do nothing
+            //
         }
         else if(snum.Length == 3)
         {
@@ -50,12 +53,9 @@ public class Router : MonoBehaviour
         {
             snum = $"{snum.Substring(0, 3)}.{snum.Substring(3, snum.Length - 3)}";
         }
-        else if (snum.Length <= 10)
+        else if (snum.Length <= 9)
         {
             snum = $"{snum.Substring(0, 3)}.{snum.Substring(3, 3)}.{snum.Substring(6, snum.Length - 6)}";
-        }
-        else {
-            snum = $"{snum.Substring(0, 3)}.{snum.Substring(3, 6)}.{snum.Substring(6, 9)}.{snum.Substring(9, snum.Length - 7)}";
         }
         IpAddressField.text = snum;
         if (snum.Length != svalue.Length)
