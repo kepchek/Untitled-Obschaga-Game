@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Router : MonoBehaviour
 {
@@ -26,6 +27,15 @@ public class Router : MonoBehaviour
 
         IpAddressField.Select();
     }
+
+    void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Return))
+    {
+        Click();
+    }
+    IpAddressField.Select();
+}
 
     public void Click()
     {
