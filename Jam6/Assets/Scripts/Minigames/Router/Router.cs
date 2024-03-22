@@ -12,6 +12,8 @@ public class Router : MonoBehaviour
     private int RndIP;
     public TMP_InputField IpAddressField;
     public TMP_Text TxtWithIP;
+
+    public GameObject ErrorTXT;
     void Start()
     {
         cnvs.SetActive(true);
@@ -20,7 +22,7 @@ public class Router : MonoBehaviour
 
         RndIP = Random.Range(100000000, 999999999);
 
-        TxtWithIP.text = RndIP.ToString("### ### ###");
+        TxtWithIP.text = RndIP.ToString("### ### ###").Replace(" ", ".");
     }
 
     public void Click()
@@ -28,8 +30,13 @@ public class Router : MonoBehaviour
         if(TxtWithIP.text == IpAddressField.text)
         {
             cnvs.SetActive(false);
+            ErrorTXT.SetActive(false);
         }
-        else Debug.Log("я ебанутый бегите");
+        else
+        {
+            ErrorTXT.SetActive(true);
+            IpAddressField.text = "";
+        }
     }
 
     private void IpValueChanged(string svalue)
