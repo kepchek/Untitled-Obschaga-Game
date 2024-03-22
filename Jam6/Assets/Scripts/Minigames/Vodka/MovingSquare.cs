@@ -6,9 +6,9 @@ using UnityEngine;
 public class MovingSquare : MonoBehaviour
 {
     bool progressIsGo;
-    float progress = 0;
-    int progressSpeed = 10;
-    private float jumpForce = 0.7f;
+    float progress = 50;
+    int progressSpeed = 1;
+    private float jumpForce = 0.5f;
     void Start()
     {
         
@@ -30,15 +30,17 @@ public class MovingSquare : MonoBehaviour
             progressIsGo = true;
             if(progress < 1)
             {
-                Debug.Log("Pizda");
+                Debug.Log(progress);
             }
             else if(progress < 100)
             {
-                progress = progressSpeed * Time.deltaTime;
+                progress += progressSpeed * Time.deltaTime;
+                Debug.Log(progress);
             }
             else
             {
                 Debug.Log("Krasava");
+                Debug.Log(progress);
             }
         }
     }
