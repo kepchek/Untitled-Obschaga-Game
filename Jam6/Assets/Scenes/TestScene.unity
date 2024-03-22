@@ -2180,7 +2180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1963196555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2280,7 +2280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cnvs: {fileID: 1963196554}
-  field: {fileID: 1426478039}
+  IpAddressField: {fileID: 1426478039}
   TxtWithIP: {fileID: 1911313611}
 --- !u!1 &2011207435
 GameObject:
