@@ -33,6 +33,7 @@ public class Router : MonoBehaviour
         {
             cnvs.SetActive(false);
             ErrorTXT.SetActive(false);
+            
         }
         else
         {
