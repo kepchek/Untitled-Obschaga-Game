@@ -33,8 +33,12 @@ public class Router : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Return))
     {
         Click();
+        IpAddressField.Select();
     }
-    IpAddressField.Select();
+    if(Input.anyKey)
+    {
+        IpAddressField.Select();
+    }
 }
 
     public void Click()
@@ -49,6 +53,7 @@ public class Router : MonoBehaviour
         {
             ErrorTXT.SetActive(true);
             IpAddressField.text = "";
+            IpAddressField.Select();
         }
     }
 
