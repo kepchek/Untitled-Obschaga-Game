@@ -6,29 +6,42 @@ public class InteractTrigger : MonoBehaviour
 {
     [SerializeField] int MiniGameKey;
     public static bool PlayerInRange;
+    public static bool TriggerIsEnabled = false; //Переменная означающая готовность скрипта-триггера работать
+
     void Awake() 
     {
         PlayerInRange = false;
     }
     private void Update() 
     {
-        ChooseMinigame();
+        if(TriggerIsEnabled)
+        {
+            ChooseMinigame();
+        }
     }
 
+    
     private void OnTriggerEnter(Collider other) //Игрок вошёл в триггер миниигры
     {
-        if(other.gameObject.tag == "Player")
+        if(TriggerIsEnabled)
         {
-            PlayerInRange = true;
-            Debug.Log("Player in range");
+            if(other.gameObject.tag == "Player")
+            {
+                PlayerInRange = true;
+                Debug.Log("Player in range");
+            }
         }
+
     }
     private void OnTriggerExit(Collider other) //Игрок вышел из триггера миниигры
     {
-        if(other.gameObject.tag == "Player")
+        if(TriggerIsEnabled)
         {
-            PlayerInRange = false;
-            Debug.Log("Player out of range");
+            if(other.gameObject.tag == "Player")
+            {
+                PlayerInRange = false;
+                Debug.Log("Player out range");
+            }
         }
     }
 
@@ -36,7 +49,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if(Control.ButtonClickedE)
         {
-            switch(MiniGameKey)//выбираем миниигры по ключу миниигры на объекте-триггере
+            switch(MiniGameKey) //выбираем миниигры по ключу миниигры на объекте-триггере
                 {
                     case 0:
                         Debug.Log($"Choose minigame {MiniGameKey}");
