@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 359685293}
   - component: {fileID: 359685292}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Fishing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5825,6 +5825,7 @@ MonoBehaviour:
   cnvs: {fileID: 1963196554}
   IpAddressField: {fileID: 1426478039}
   TxtWithIP: {fileID: 1911313611}
+  MinigameTrigger0: {fileID: 0}
   ErrorTXT: {fileID: 1836465261}
 --- !u!1 &1984171385
 GameObject:

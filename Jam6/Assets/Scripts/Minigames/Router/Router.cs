@@ -14,7 +14,14 @@ public class Router : MonoBehaviour
     public TMP_InputField IpAddressField;
     public TMP_Text TxtWithIP;
 
+    public GameObject MinigameTrigger0; //test........................
+
     public GameObject ErrorTXT;
+    
+    public void ExitMinigame0()
+    {
+        MinigameTrigger0.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
+    }
     void OnEnable() // когда окно включается генерится новый айпишник
     {
         cnvs.SetActive(true);
@@ -28,18 +35,23 @@ public class Router : MonoBehaviour
         IpAddressField.Select();
     }
 
+    private void Awake() 
+    {
+        MinigameTrigger0 = GameObject.Find("MinigameTrigger0");
+    }
+
     void Update()
-{
-    if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
     {
-        Click();
-        IpAddressField.Select();
+        if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
+        {
+            Click();
+            IpAddressField.Select();
+        }
+        if(Input.anyKey) // чтобы окно ввода запускалось без клика по нему, но оно не работает так что я хуй знает зачем оно тут существует, но лучше не трогай мало ли что
+        {
+            IpAddressField.Select();
+        }
     }
-    if(Input.anyKey) // чтобы окно ввода запускалось без клика по нему, но оно не работает так что я хуй знает зачем оно тут существует, но лучше не трогай мало ли что
-    {
-        IpAddressField.Select();
-    }
-}
 
     public void Click() // проверяет соответствие введённой строки и сгенеренного айпишника
     {
@@ -49,6 +61,7 @@ public class Router : MonoBehaviour
             IpAddressField.text = "";
             cnvs.SetActive(false);
             ErrorTXT.SetActive(false);
+            ExitMinigame0();
         }
         else
         {

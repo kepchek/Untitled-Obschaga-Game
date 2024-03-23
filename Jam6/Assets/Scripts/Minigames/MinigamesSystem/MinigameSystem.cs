@@ -23,7 +23,7 @@ public class MinigameSystem : MonoBehaviour
     private void Update() {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            StartMinigame1();
+            StartMinigame0();
             Debug.Log("Minigame ready!");
         }
     }
@@ -47,5 +47,9 @@ public class MinigameSystem : MonoBehaviour
     void StartMinigame4()
     {
         MinigameTrigger4.GetComponent<InteractTrigger>().TriggerIsEnabled = true;
+    }
+    public void ExitMinigame0()
+    {
+        MinigameTrigger0.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
     }
 }
