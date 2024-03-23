@@ -7,7 +7,16 @@ public class MinigamesTimer : MonoBehaviour
 {
     public Slider timeBar;
 
-    float timecount = 5;
+    public GameObject whatIsGame;
+
+    [SerializeField] float startTimer;
+
+    float timecount;
+
+    void OnEnable()
+    {
+        timecount = startTimer;
+    }
 
     public void TimerOut()
     {
@@ -15,6 +24,15 @@ public class MinigamesTimer : MonoBehaviour
         {
             timecount -= Time.deltaTime;
             timeBar.value = timecount;
+        }
+        else if(timecount == 0)
+        {
+            switch (whatIsGame.name)
+            {
+                case "Minigame0":
+                
+                break;
+            }
         }
     }
     void FixedUpdate()
