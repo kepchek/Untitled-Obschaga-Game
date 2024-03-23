@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,6 +521,75 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &222580688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
+      propertyPath: m_Name
+      value: Room (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd270b74f9e9ce94c83c69712b1fa594, type: 3}
 --- !u!1 &224303096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,10 +1130,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1075,7 +1144,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &504171463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1171,6 +1240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bfa17a3519ac240aa12a002f54f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 2.5
   progressSlider: {fileID: 199381402}
 --- !u!1 &574837321
 GameObject:
@@ -2646,6 +2716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57d8372bda56074f91e6f2f0717f656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 5
 --- !u!1 &1074553816
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +4912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1167a5a9ed41e9344a3a68132451a21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
 --- !u!61 &2049447145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4935,3 +5005,4 @@ SceneRoots:
   - {fileID: 1471032612}
   - {fileID: 1237574815}
   - {fileID: 599928852}
+  - {fileID: 222580688}
