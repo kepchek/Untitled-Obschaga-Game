@@ -20,6 +20,9 @@ public class Router : MonoBehaviour
     
     public void ExitMinigame0()
     {
+            IpAddressField.text = "";
+            cnvs.SetActive(false);
+            ErrorTXT.SetActive(false);
         MinigameTrigger0.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
     }
     void OnEnable() // когда окно включается генерится новый айпишник
@@ -59,14 +62,12 @@ public class Router : MonoBehaviour
         {
             Scores.ChangeScore(5);
             BuffSystem.isBuffReady = true;
-            IpAddressField.text = "";
-            cnvs.SetActive(false);
-            ErrorTXT.SetActive(false);
             ExitMinigame0();
         }
         else
         {
             ErrorTXT.SetActive(true);
+            Scores.ChangeScore(-100);
             IpAddressField.text = "";
             IpAddressField.Select();
         }
