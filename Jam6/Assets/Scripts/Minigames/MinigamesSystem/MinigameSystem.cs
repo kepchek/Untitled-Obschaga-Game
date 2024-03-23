@@ -12,17 +12,24 @@ public class MinigameSystem : MonoBehaviour
     public GameObject MinigameTrigger3;
     public GameObject MinigameTrigger4;
     int randomMGvalue; //Случайный выбор числа, для выбора миниигры
+    public float minDelay = 10f;
+    public float maxDelay = 20.1f;
+    public float delayDecrease = 0.1f;
+    
 
 
     private void Awake() 
     {
-        randomMGvalue = UnityEngine.Random.Range(0, 22);
         Debug.Log(randomMGvalue);
         MinigameTrigger0 = GameObject.Find("MinigameTrigger0");
         MinigameTrigger1 = GameObject.Find("MinigameTrigger1");
         MinigameTrigger2 = GameObject.Find("MinigameTrigger2");
         MinigameTrigger3 = GameObject.Find("MinigameTrigger3");
         MinigameTrigger4 = GameObject.Find("MinigameTrigger4");
+    }
+    private void Start() 
+    {
+        StartCoroutine(RandomMethodInvoke());    
     }
     
 
@@ -57,7 +64,7 @@ public class MinigameSystem : MonoBehaviour
         MinigameTrigger4.GetComponent<InteractTrigger>().TriggerIsEnabled = true;
     }
 
-    void RandomMethodInvoke()
+    IEnumerator RandomMethodInvoke()
     {
         /*
         Ценность игр
@@ -68,28 +75,44 @@ public class MinigameSystem : MonoBehaviour
         Водка - 2
 
         */
-        if((randomMGvalue > 0) & (randomMGvalue <= 6)) //Выбор миниигры посредством случайного числа и ценности миниигры
+        float delay = UnityEngine.Random.Range(minDelay, maxDelay);
+        while (true)
         {
-            //кликер
-        }
-        else if((randomMGvalue > 6) & (randomMGvalue <= 11))
-        {
-            //роутер
-        }
-        else if((randomMGvalue > 11) & (randomMGvalue <= 15))
-        {
-            //провода
-        }
-        else if((randomMGvalue > 15) & (randomMGvalue <= 19))
-        {
-            //носки
-        }
-        else if((randomMGvalue > 19) & (randomMGvalue <= 21))
-        {
-            //водка
+            randomMGvalue = UnityEngine.Random.Range(0, 22);
+            Debug.Log(randomMGvalue);
+            if((randomMGvalue >= 0) & (randomMGvalue <= 6)) //Выбор миниигры посредством случайного числа и ценности миниигры
+            {
+                //кликер
+                Debug.Log("Кликер");
+            }
+            else if((randomMGvalue > 6) & (randomMGvalue <= 11))
+            {
+                //роутер
+                Debug.Log("Роутер");
+            }
+            else if((randomMGvalue > 11) & (randomMGvalue <= 15))
+            {
+                //провода
+                Debug.Log("Провода");
+            }
+            else if((randomMGvalue > 15) & (randomMGvalue <= 19))
+            {
+                //носки
+                Debug.Log("Носки");
+            }
+            else if((randomMGvalue > 19) & (randomMGvalue <= 21))
+            {   
+                //водка
+                Debug.Log("Водка");
+            }
+            yield return new WaitForSeconds(delay);
+            delay = Mathf.Max(minDelay, delay - delayDecrease);
         }
 
+        
+
     }
+
 
     /*
     public void ExitMinigame0()
