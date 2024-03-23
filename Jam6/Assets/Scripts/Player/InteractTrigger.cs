@@ -6,7 +6,7 @@ public class InteractTrigger : MonoBehaviour
 {
     [SerializeField] int MiniGameKey;
     public static bool PlayerInRange;
-    public static bool TriggerIsEnabled = false; //Переменная означающая готовность скрипта-триггера работать
+    public static bool TriggerIsEnabled = true; //Переменная означающая готовность скрипта-триггера работать
 
     void Awake() 
     {
@@ -57,7 +57,7 @@ public class InteractTrigger : MonoBehaviour
                         break;
                     case 1:
                         Debug.Log($"Choose minigame {MiniGameKey}");
-                        //GameObject.Find("Minigame1").transform.GetChild(0).gameObject.SetActive(true);
+                        GameObject.Find("Minigame1").transform.GetChild(0).gameObject.SetActive(true);
                         break;
                     case 2:
                         Debug.Log($"Choose minigame {MiniGameKey}");
