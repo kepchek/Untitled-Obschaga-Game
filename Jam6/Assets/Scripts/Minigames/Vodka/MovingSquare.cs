@@ -10,7 +10,7 @@ public class MovingSquare : MonoBehaviour
     bool progressIsActive;
     float progress;
     int progressSpeed = 8;
-    private float jumpForce = 0.2f;
+    [SerializeField]private float jumpForce = 0.2f;
 
     public Slider progressSlider;
     void OnEnable()
