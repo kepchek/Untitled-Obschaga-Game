@@ -67,6 +67,7 @@ public class Router : MonoBehaviour
         else
         {
             ErrorTXT.SetActive(true);
+            Scores.ChangeScore(-100);
             IpAddressField.text = "";
             IpAddressField.Select();
         }
