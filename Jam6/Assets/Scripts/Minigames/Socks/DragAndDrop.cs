@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+// тут нет ни одной строчки моего кода, так что я его просто не понимаю и комментарии написать не смогу)
 public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     [SerializeField] private Canvas canvas;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-
-    public Animator animator;
 
 
     private void Awake() 
@@ -25,7 +23,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = .8f;
-        if (animator != null) animator.enabled = false;
     }
     public void OnDrag(PointerEventData eventData) 
     {

@@ -22,7 +22,7 @@ public class Clicker : MonoBehaviour
             Click();
         }
     }
-
+    // в кликере не нужны комментарии.
     public void Click()
     {
         progress++;
