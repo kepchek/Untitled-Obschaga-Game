@@ -15,7 +15,7 @@ public class InteractTrigger : MonoBehaviour
         ChooseMinigame();
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other) //Игрок вошёл в триггер миниигры
     {
         if(other.gameObject.tag == "Player")
         {
@@ -23,7 +23,7 @@ public class InteractTrigger : MonoBehaviour
             Debug.Log("Player in range");
         }
     }
-    private void OnTriggerExit(Collider other) 
+    private void OnTriggerExit(Collider other) //Игрок вышел из триггера миниигры
     {
         if(other.gameObject.tag == "Player")
         {
