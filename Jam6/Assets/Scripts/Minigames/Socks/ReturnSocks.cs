@@ -22,17 +22,8 @@ public class ReturnSocks : MonoBehaviour
     private Vector3 sock5Coord;
 
     private Vector3 sock6Coord;
-    void OnEnable()
-    {
-        sock1.transform.position = sock1Coord;
-        sock2.transform.position = sock2Coord;
-        sock3.transform.position = sock3Coord;
-        sock4.transform.position = sock4Coord;
-        sock5.transform.position = sock5Coord;
-        sock6.transform.position = sock6Coord;
-    }
 
-    void Start()
+    void Awake() // remember all socks coordinates
     {
         sock1Coord = sock1.transform.position;
         sock2Coord = sock2.transform.position;
@@ -40,6 +31,17 @@ public class ReturnSocks : MonoBehaviour
         sock4Coord = sock4.transform.position;
         sock5Coord = sock5.transform.position;
         sock6Coord = sock6.transform.position;
+    }
+
+    void OnEnable() // when minigame restart - return socks
+    {
+        sock1.transform.position = sock1Coord;
+        Debug.Log(sock1.transform.position);
+        sock2.transform.position = sock2Coord;
+        sock3.transform.position = sock3Coord;
+        sock4.transform.position = sock4Coord;
+        sock5.transform.position = sock5Coord;
+        sock6.transform.position = sock6Coord;
     }
 
 }

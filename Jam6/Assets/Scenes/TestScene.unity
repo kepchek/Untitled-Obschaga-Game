@@ -2662,6 +2662,7 @@ GameObject:
   - component: {fileID: 767213946}
   - component: {fileID: 767213945}
   - component: {fileID: 767213944}
+  - component: {fileID: 767213947}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Untagged
@@ -2761,6 +2762,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &767213947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767213942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4c90458db2c9b41bc8cd3a220fdba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sock1: {fileID: 622423362}
+  sock2: {fileID: 574837321}
+  sock3: {fileID: 720430845}
+  sock4: {fileID: 280556184}
+  sock5: {fileID: 1192104154}
+  sock6: {fileID: 233931736}
 --- !u!1 &792956458
 GameObject:
   m_ObjectHideFlags: 0

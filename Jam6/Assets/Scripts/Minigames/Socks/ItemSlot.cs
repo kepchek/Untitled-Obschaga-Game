@@ -23,16 +23,19 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 counter++;
                 if (counter == 6)
                 {
-                    // ты выиграл выдаётся баф
-                    Destroy(minigame);
+                    counter = 0;
+                    minigame.SetActive(false);
+                    eventData.pointerDrag.GetComponent<CanvasGroup>().blocksRaycasts = true; // почему то полсдений объект при повторном запуске выключал себе эту галочку, другого способа фикса я не нашёл
                 }
             }
             else
             {
                 // ты проиграл, выдаётся дебаф
-                Destroy(minigame);
+                counter = 0;
+                minigame.SetActive(false);
+                eventData.pointerDrag.GetComponent<CanvasGroup>().blocksRaycasts = true;
             }
-
+            
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
     }
