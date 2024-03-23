@@ -57,6 +57,7 @@ public class Router : MonoBehaviour
     {
         if(TxtWithIP.text == IpAddressField.text) 
         {
+            Scores.ChangeScore(5);
             BuffSystem.isBuffReady = true;
             IpAddressField.text = "";
             cnvs.SetActive(false);

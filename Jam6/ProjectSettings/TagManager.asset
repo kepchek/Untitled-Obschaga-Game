@@ -8,6 +8,9 @@ TagManager:
   - color1
   - color2
   - color3
+  - wires1
+  - wires2
+  - wires3
   layers:
   - Default
   - TransparentFX
