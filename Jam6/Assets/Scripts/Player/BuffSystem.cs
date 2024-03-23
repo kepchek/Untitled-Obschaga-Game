@@ -6,8 +6,9 @@ using UnityEngine;
 public class BuffSystem : MonoBehaviour
 {
     public static bool Buff;
-    public static bool isBuffReady = false;
-    public static void BuffSpeed(float time)
+    public float time = 5f;
+    public static bool isBuffReady = false;//Переменная отвечающая за вкл/выкл баффа
+    public void BuffSpeed()
     {
         if(isBuffReady)
         {
@@ -15,14 +16,13 @@ public class BuffSystem : MonoBehaviour
             if (time > 0)
             {
                 Buff = true;
-                //Control.speed*=1.3f;
                 time -= Time.deltaTime;
                 Debug.Log(time);
             }
             else 
             {
                 Buff = false;
-                Debug.Log("Speed buff end");
+                Debug.Log("buff end");
                 isBuffReady = false;
             }
         }
@@ -30,7 +30,7 @@ public class BuffSystem : MonoBehaviour
     }
 
     private void Update() {
-        //BuffSpeed(5f);
+        BuffSpeed();
     }
 
 }

@@ -37,7 +37,6 @@ public class Control : MonoBehaviour
         movevector.z = Input.GetAxisRaw("Vertical");
         anim.SetFloat("moveX", movevector.x);
         anim.SetFloat("moveZ", movevector.z);
-        //anim.SetBool("ismoveX", movevector.x == 0);
         if(movevector.x == 0)
         {
             anim.SetBool("isMoveX", false);
@@ -46,7 +45,7 @@ public class Control : MonoBehaviour
         {
             anim.SetBool("isMoveX", true);
         }
-        if(BuffSystem.Buff)
+        if(BuffSystem.Buff)//Ускорение, если бафф активен
         {
             rb.velocity = new Vector3(movevector.x, 0 , movevector.z).normalized*speed*1.3f;
         }
