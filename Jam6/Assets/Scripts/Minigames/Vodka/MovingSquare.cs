@@ -36,18 +36,6 @@ public class MovingSquare : MonoBehaviour
         if(collision.CompareTag("Fish"))
         {
             progressIsActive = true;
-            /*
-            if(progress < 100)
-            {
-                progress += progressSpeed * Time.deltaTime;
-                //Debug.Log(progress);
-            }
-            else
-            {
-                Debug.Log("ffff");
-                // прользователь победил и на него накидывается какой-то баф
-            }
-            */
         }
     }
 
