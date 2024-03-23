@@ -2,24 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovingSquare : MonoBehaviour
 {
-    bool progressIsGo;
-    float progress = 50;
-    int progressSpeed = 1;
-    private float jumpForce = 0.5f;
+    float progress = 10;
+    int progressSpeed = 8;
+    private float jumpForce = 0.2f;
+
+    public Slider progressSlider;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) // Замена KeyCode.Space на вашу кнопку
+        if (Input.GetKey(KeyCode.Space))
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        progressSlider.value = progress;
+        if(progress < 1)
+        {
+            Debug.Log("Лох твою маму ебали");
+            // пользователь поиграл на него накинулся дебаф
         }
     }
 
@@ -27,26 +34,21 @@ public class MovingSquare : MonoBehaviour
     {
         if(collision.CompareTag("Fish"))
         {
-            progressIsGo = true;
-            if(progress < 1)
-            {
-                Debug.Log(progress);
-            }
-            else if(progress < 100)
+            if(progress < 100)
             {
                 progress += progressSpeed * Time.deltaTime;
-                Debug.Log(progress);
+                //Debug.Log(progress);
             }
             else
             {
-                Debug.Log("Krasava");
-                Debug.Log(progress);
+                Debug.Log("ffff");
+                // прользователь победил и на него накидывается какой-то баф
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        progressIsGo = false;
+        progress -= 1;
     }
 }

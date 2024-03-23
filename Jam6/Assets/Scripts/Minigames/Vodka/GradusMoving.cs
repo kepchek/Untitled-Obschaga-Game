@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class GradusMoving : MonoBehaviour
 {
-    public float speed = 100;
+    private float speed = 50f;
 
-    float maxY = 459;
+    int chance = 100;
+
+    float maxY = 459; // upper limit
     float minY = 122;
 
     private void Update()
@@ -25,10 +26,9 @@ public class GradusMoving : MonoBehaviour
             speed = Mathf.Abs(speed);
         }
     }
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        float randomNumber = UnityEngine.Random.value % 2;
-        if(randomNumber == 0)
+        if(UnityEngine.Random.Range(50, 5000) <= chance) //change Range to influence on probability
         {
             speed *= -1;
         }
