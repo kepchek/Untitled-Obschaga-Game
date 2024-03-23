@@ -27,8 +27,6 @@ public class Control : MonoBehaviour
     {
         Walk();
         CheckForInteract();
-        //CheckForSpeedBuff();
-        Flip();
     }
 
     void Walk() //Простая механика ходьбы через инпуты
@@ -53,11 +51,6 @@ public class Control : MonoBehaviour
         {
             rb.velocity = new Vector3(movevector.x, 0 , movevector.z).normalized*speed;
         }
-    }
-    
-    void Flip()
-    {
-        
     }
 
     public void CheckForInteract()//Проверка на взаимодействие
