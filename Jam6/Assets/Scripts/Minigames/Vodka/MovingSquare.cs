@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class MovingSquare : MonoBehaviour
 {
-    float progress = 10;
+
+    bool progressIsActive;
+    float progress;
     int progressSpeed = 8;
     private float jumpForce = 0.2f;
 
     public Slider progressSlider;
-    void Start()
+    void OnEnable()
     {
-        
+        progress = 10;
     }
 
     void Update()
@@ -23,16 +25,40 @@ public class MovingSquare : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         progressSlider.value = progress;
-        if(progress < 1)
+    }
+    void FixedUpdate()
+    {
+        DoProgress(progressIsActive);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Fish"))
         {
-            Debug.Log("Лох твою маму ебали");
-            // пользователь поиграл на него накинулся дебаф
+            progressIsActive = true;
+            /*
+            if(progress < 100)
+            {
+                progress += progressSpeed * Time.deltaTime;
+                //Debug.Log(progress);
+            }
+            else
+            {
+                Debug.Log("ffff");
+                // прользователь победил и на него накидывается какой-то баф
+            }
+            */
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Fish"))
+        progressIsActive = false;
+    }
+
+    private void DoProgress(bool progressIsActive)
+    {
+        if(progressIsActive)
         {
             if(progress < 100)
             {
@@ -45,10 +71,14 @@ public class MovingSquare : MonoBehaviour
                 // прользователь победил и на него накидывается какой-то баф
             }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        progress -= 1;
+        else
+        {
+            progress -= 0.1f;
+            if(progress < 1)
+            {
+                Debug.Log("Лох твою маму ебали");
+                // пользователь поиграл на него накинулся дебаф
+            }
+        }
     }
 }
