@@ -36,7 +36,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if(Control.ButtonClickedE)
         {
-            switch(MiniGameKey)
+            switch(MiniGameKey)//выбираем миниигры по ключу миниигры на объекте-триггере
                 {
                     case 0:
                         Debug.Log($"Choose minigame {MiniGameKey}");

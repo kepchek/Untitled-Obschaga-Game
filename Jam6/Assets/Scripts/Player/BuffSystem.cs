@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class BuffSystem : MonoBehaviour
 {
-    public static bool Buff;
-    public float time = 5f;
-    public static bool isBuffReady = false;//Переменная отвечающая за вкл/выкл баффа
+    public static bool Buff; //Переменая проверямая в Control на наличие баффа
+    public float time = 5f; //Я хуй знает как сделать кастомное кол-во секунд на бафф
+    public static bool isBuffReady = false; //Переменная отвечающая за вкл/выкл баффа
     public void BuffSpeed()
     {
         if(isBuffReady)
