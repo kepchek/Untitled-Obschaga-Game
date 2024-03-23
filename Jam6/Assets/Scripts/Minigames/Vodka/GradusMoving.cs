@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// ну и хули тебе тут объяснять тут всё и так очевидно
 public class GradusMoving : MonoBehaviour
 {
     private float speed = 50f;

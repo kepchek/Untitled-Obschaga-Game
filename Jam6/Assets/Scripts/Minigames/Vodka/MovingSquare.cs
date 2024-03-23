@@ -20,11 +20,11 @@ public class MovingSquare : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)) // движение куба вверх вниз
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        progressSlider.value = progress;
+        progressSlider.value = progress; // слайдер берёт значение (в рот)
     }
     void FixedUpdate()
     {
@@ -44,7 +44,7 @@ public class MovingSquare : MonoBehaviour
         progressIsActive = false;
     }
 
-    private void DoProgress(bool progressIsActive)
+    private void DoProgress(bool progressIsActive) // проверяет был бы игрок в триггере
     {
         if(progressIsActive)
         {
@@ -64,7 +64,7 @@ public class MovingSquare : MonoBehaviour
             progress -= 0.1f;
             if(progress < 1)
             {
-                Debug.Log("Лох твою маму ебали");
+                Debug.Log("Лох твою маму ебали"); // я принципиально не буду убирать эту строку чтобы все знали что у проигравших матерей ебали
                 // пользователь поиграл на него накинулся дебаф
             }
         }

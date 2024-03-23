@@ -15,7 +15,7 @@ public class Router : MonoBehaviour
     public TMP_Text TxtWithIP;
 
     public GameObject ErrorTXT;
-    void OnEnable()
+    void OnEnable() // когда окно включается генерится новый айпишник
     {
         cnvs.SetActive(true);
 
@@ -30,20 +30,20 @@ public class Router : MonoBehaviour
 
     void Update()
 {
-    if (Input.GetKeyDown(KeyCode.Return))
+    if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
     {
         Click();
         IpAddressField.Select();
     }
-    if(Input.anyKey)
+    if(Input.anyKey) // чтобы окно ввода запускалось без клика по нему, но оно не работает так что я хуй знает зачем оно тут существует, но лучше не трогай мало ли что
     {
         IpAddressField.Select();
     }
 }
 
-    public void Click()
+    public void Click() // проверяет соответствие введённой строки и сгенеренного айпишника
     {
-        if(TxtWithIP.text == IpAddressField.text)
+        if(TxtWithIP.text == IpAddressField.text) 
         {
             BuffSystem.isBuffReady = true;
             IpAddressField.text = "";
@@ -58,7 +58,7 @@ public class Router : MonoBehaviour
         }
     }
 
-
+// хуйню ниже не трогай я не ебу как она работает
     private void IpValueChanged(string svalue)
     {
         string snum = System.Text.RegularExpressions.Regex.Replace(svalue, @"[^0-9]", string.Empty) ?? string.Empty;

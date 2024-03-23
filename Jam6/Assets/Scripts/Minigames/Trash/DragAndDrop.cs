@@ -11,8 +11,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
-    public Animator animator;
-
 
     private void Awake() 
     {
@@ -25,7 +23,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = .8f;
-        if (animator != null) animator.enabled = false;
     }
     public void OnDrag(PointerEventData eventData) 
     {
