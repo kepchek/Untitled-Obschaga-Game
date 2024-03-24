@@ -6,11 +6,13 @@ public class InteractTrigger : MonoBehaviour
 {
     [SerializeField] int MiniGameKey;
     public static bool PlayerInRange;
+    private Animator anim;
     public bool TriggerIsEnabled = false; //Переменная означающая готовность скрипта-триггера работать
 
     void Awake() 
     {
         PlayerInRange = false;
+        anim = GetComponent<Animator>();
     }
     private void Update() 
     {
@@ -28,6 +30,7 @@ public class InteractTrigger : MonoBehaviour
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = true;
+                anim.SetBool("PlayerInRange", true); //Меняем спрайт миниигры на обведённый
                 Debug.Log("Player in range");
             }
         }
@@ -40,6 +43,7 @@ public class InteractTrigger : MonoBehaviour
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = false;
+                anim.SetBool("PlayerInRange", false);
                 Debug.Log("Player out range");
             }
         }
