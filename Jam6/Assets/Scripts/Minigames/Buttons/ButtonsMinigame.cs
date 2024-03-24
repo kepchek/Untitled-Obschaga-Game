@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class ButtonsMinigame : MonoBehaviour
 {
+    [SerializeField] TMP_Text Combin;
     public GameObject gameArea;
 
     public GameObject MinigameTrigger4;
+
     private string combination;
 
     private string userInput = "";
@@ -46,6 +48,9 @@ public class ButtonsMinigame : MonoBehaviour
     {
         combination = Random.Range(100000000, 999999999).ToString().Replace("0", "1"); 
         // у меня нет кнопки которая отвечает за ноль, вот такие пироги...
+
+        Combin.text = combination;
+
         Debug.Log(combination);
 
 
