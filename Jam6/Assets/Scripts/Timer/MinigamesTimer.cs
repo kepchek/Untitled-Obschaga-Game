@@ -58,6 +58,11 @@ public class MinigamesTimer : MonoBehaviour
                     Scores.ChangeScore(-7);
                     GameObject.Find("Studies Canvas").GetComponent<Clicker>().ExitMinigame3();
                     break;
+                case "Minigame4":
+                    Debug.Log(whatIsGame.name);
+                    Scores.ChangeScore(-20);
+                    GameObject.Find("ButtonsGame Canvas").GetComponent<ButtonsMinigame>().ExitMinigame4();
+                    break;
             }
         }
     }
