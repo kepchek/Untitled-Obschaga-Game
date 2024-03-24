@@ -34,15 +34,15 @@ public class MinigameSystem : MonoBehaviour
     }
     
 
- //МЕТОД ДЛЯ ТЕСТА
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            StartMinigame0();
-            Debug.Log("Minigame ready!");
-        }
+    //МЕТОД ДЛЯ ТЕСТА
+    // private void Update() {
+    //     if(Input.GetKeyDown(KeyCode.R))
+    //     {
+    //         StartMinigame0();
+    //         Debug.Log("Minigame ready!");
+    //     }
         
-    }
+    // }
     //Запускаем готовноость начать миниигру
     //Необходимо перекинуть это говнище в корутин
     public void StartMinigame0()
@@ -94,8 +94,8 @@ public class MinigameSystem : MonoBehaviour
             }
             else if((randomMGvalue > 11) & (randomMGvalue <= 15))
             {
-                //провода
-                Debug.Log("Провода");
+                StartMinigame4();
+                Debug.Log("Удлинитель бля");
             }
             else if((randomMGvalue > 15) & (randomMGvalue <= 19))
             {
