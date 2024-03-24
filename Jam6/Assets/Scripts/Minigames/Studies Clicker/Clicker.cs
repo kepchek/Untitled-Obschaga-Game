@@ -7,9 +7,12 @@ public class Clicker : MonoBehaviour
 {
     int progress;
 
+    public GameObject Minigame3GameArea;
+    public GameObject MinigameTrigger3;
+
     public Slider progressBar;
 
-    void Start()
+    void OnEnable()
     {
         progress = 0;    
     }
@@ -17,6 +20,10 @@ public class Clicker : MonoBehaviour
     void Update()
     {
         progressBar.value = progress;
+        if (progress >= 10)
+        {
+            ExitMinigame3();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Click();
@@ -26,5 +33,11 @@ public class Clicker : MonoBehaviour
     public void Click()
     {
         progress++;
+    }
+
+    public void ExitMinigame3()
+    {
+        Minigame3GameArea.SetActive(false);
+        MinigameTrigger3.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
     }
 }

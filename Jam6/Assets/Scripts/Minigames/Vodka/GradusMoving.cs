@@ -7,12 +7,24 @@ public class GradusMoving : MonoBehaviour
 {
     private float speed = 50f;
 
+    Vector2 gradusStartPosition;
+
     int chance = 100;
 
-    float maxY = 459; // upper limit
-    float minY = 122;
+    float maxY = 459; // верхняя граница в которую уприрается объект
+    float minY = 122; // догадайся блять
 
-    private void Update()
+    void Awake() // запоминаем стартовую позицию
+    {
+        gradusStartPosition = gameObject.transform.position;
+    }
+
+    void OnEnable()
+    {
+        gameObject.transform.position = gradusStartPosition; // присваиваем стартовую позицию при перезагрузке
+    }
+
+    private void Update() // движение этой хуйни
     {
         Vector2 position = gameObject.transform.position;
         position.y += speed*Time.deltaTime;
@@ -26,9 +38,18 @@ public class GradusMoving : MonoBehaviour
             speed = Mathf.Abs(speed);
         }
     }
-    private void FixedUpdate()
+
+    
+/*
+-Василий Иванович, а отчего это у вас волосы блестят? 
+-Петька, это ж я их яйцами натираю 
+-Ну акробат!
+*/
+
+
+    private void FixedUpdate() 
     {
-        if(UnityEngine.Random.Range(50, 5000) <= chance) //change Range to influence on probability
+        if(UnityEngine.Random.Range(50, 5000) <= chance) // вероятность смены напрвления движения, чем больше второе число тем меньше вероятность, вот и думай.
         {
             speed *= -1;
         }

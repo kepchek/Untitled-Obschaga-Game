@@ -12,10 +12,15 @@ public class MovingSquare : MonoBehaviour
     int progressSpeed = 8;
     [SerializeField]private float jumpForce = 0.2f;
 
+    public GameObject MinigameTrigger2;
+
+    public GameObject Minigame2GameArea;
+
     public Slider progressSlider;
     void OnEnable()
     {
         progress = 10;
+        progressSlider.value = progress;
     }
 
     void Update()
@@ -55,7 +60,9 @@ public class MovingSquare : MonoBehaviour
             }
             else
             {
-                Debug.Log("ffff");
+                Scores.ChangeScore(50);
+                ExitMinigame2();
+                Debug.Log("Win");
                 // прользователь победил и на него накидывается какой-то баф
             }
         }
@@ -64,9 +71,17 @@ public class MovingSquare : MonoBehaviour
             progress -= 0.1f;
             if(progress < 1)
             {
+                Scores.ChangeScore(-50);
+                ExitMinigame2();
                 Debug.Log("Лох твою маму ебали"); // я принципиально не буду убирать эту строку чтобы все знали что у проигравших матерей ебали
                 // пользователь поиграл на него накинулся дебаф
             }
         }
+    }
+
+    public void ExitMinigame2()
+    {
+        Minigame2GameArea.SetActive(false);
+        MinigameTrigger2.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
     }
 }

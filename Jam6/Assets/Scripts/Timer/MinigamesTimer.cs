@@ -23,6 +23,7 @@ public class MinigamesTimer : MonoBehaviour
     void OnEnable()
     {
         timecount = startTimer;
+        timeBar.interactable = false;
     }
 
     public void TimerOut()
@@ -38,12 +39,21 @@ public class MinigamesTimer : MonoBehaviour
             switch (whatIsGame.name)
             {
                 case "Minigame0":
-                Debug.Log(whatIsGame.name);
-                GameObject.Find("Router Canvas").GetComponent<Router>().ExitMinigame0();
-                break;
+                    Debug.Log(whatIsGame.name);
+                    GameObject.Find("Router Canvas").GetComponent<Router>().ExitMinigame0();
+                    break;
                 case "Minigame1":
-
-                break;
+                    Debug.Log(whatIsGame.name);
+                    GameObject.Find("Trash").GetComponent<ItemSlot>().ExitMinigame1();
+                    break;
+                case "Minigame2":
+                    Debug.Log(whatIsGame.name);
+                    GameObject.Find("Fishing Canvas").GetComponent<MovingSquare>().ExitMinigame2();
+                    break;
+                case "Minigame3":
+                    Debug.Log(whatIsGame.name);
+                    GameObject.Find("Studies Canvas").GetComponent<Clicker>().ExitMinigame3();
+                    break;
             }
         }
     }
