@@ -22,6 +22,10 @@ public class MovingSquare : MonoBehaviour
         progress = 10;
         progressSlider.value = progress;
     }
+    private void Awake() 
+    {
+        MinigameTrigger2 = GameObject.Find("MinigameTrigger2");
+    }
 
     void Update()
     {

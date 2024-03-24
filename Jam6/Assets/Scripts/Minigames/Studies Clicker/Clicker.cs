@@ -12,6 +12,10 @@ public class Clicker : MonoBehaviour
 
     public Slider progressBar;
 
+    private void Awake() {
+        MinigameTrigger3 = GameObject.Find("MinigameTrigger3");
+    }
+
     void OnEnable()
     {
         progress = 0;    

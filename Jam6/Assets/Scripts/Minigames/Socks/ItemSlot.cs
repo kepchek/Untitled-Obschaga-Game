@@ -17,6 +17,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         MinigameTrigger1.GetComponent<InteractTrigger>().TriggerIsEnabled = false;
     }
 
+    private void Awake() 
+    {
+        MinigameTrigger1 = GameObject.Find("MinigameTrigger1");
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");

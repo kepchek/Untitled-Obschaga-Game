@@ -65,6 +65,15 @@ public class InteractTrigger : MonoBehaviour
                         break;
                     case 2:
                         Debug.Log($"Choose minigame {MiniGameKey}");
+                        GameObject.Find("Minigame2").transform.GetChild(0).gameObject.SetActive(true);
+                        break;
+                    case 3:
+                        Debug.Log($"Choose minigame {MiniGameKey}");
+                        GameObject.Find("Minigame3").transform.GetChild(0).gameObject.SetActive(true);
+                        break;
+                    case 4:
+                        Debug.Log($"Choose minigame {MiniGameKey}");
+                        GameObject.Find("Minigame4").transform.GetChild(0).gameObject.SetActive(true);
                         break;
                 }            
         }

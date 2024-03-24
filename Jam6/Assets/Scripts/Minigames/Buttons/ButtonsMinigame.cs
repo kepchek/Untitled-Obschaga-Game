@@ -36,6 +36,9 @@ public class ButtonsMinigame : MonoBehaviour
 
     public Button B9;
 
+    private void Awake() {
+        MinigameTrigger4 = GameObject.Find("MinigameTrigger4");
+    }
     public void ExitMinigame4()
     {
         counter = 0;

@@ -9160,7 +9160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1349812465}
   whatIsGame: {fileID: 389558657}
-  startTimer: 8
+  startTimer: 30
 --- !u!1 &1451330309
 GameObject:
   m_ObjectHideFlags: 0
