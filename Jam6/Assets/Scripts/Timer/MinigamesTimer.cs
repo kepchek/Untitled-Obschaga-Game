@@ -9,9 +9,16 @@ public class MinigamesTimer : MonoBehaviour
 
     public GameObject whatIsGame;
 
+    // public GameObject game;
+
     [SerializeField] float startTimer;
 
     float timecount;
+
+    // void Awake()
+    // {
+    //     game = GameObject.Find("Router Canvas");
+    // }
 
     void OnEnable()
     {
@@ -25,12 +32,17 @@ public class MinigamesTimer : MonoBehaviour
             timecount -= Time.deltaTime;
             timeBar.value = timecount;
         }
-        else if(timecount == 0)
+        else
         {
+            Debug.Log("timer 0");
             switch (whatIsGame.name)
             {
                 case "Minigame0":
-                
+                Debug.Log(whatIsGame.name);
+                GameObject.Find("Router Canvas").GetComponent<Router>().ExitMinigame0();
+                break;
+                case "Minigame1":
+
                 break;
             }
         }

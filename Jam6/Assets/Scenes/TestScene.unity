@@ -4010,6 +4010,9 @@ MonoBehaviour:
   MinigameTrigger2: {fileID: 0}
   MinigameTrigger3: {fileID: 0}
   MinigameTrigger4: {fileID: 0}
+  minDelay: 10
+  maxDelay: 20.1
+  delayDecrease: 0.1
 --- !u!1 &933481357
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,7 +7122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 393678134}
-  whatIsGame: {fileID: 0}
+  whatIsGame: {fileID: 918999767}
   startTimer: 5
 --- !u!1 &1984171385
 GameObject:
