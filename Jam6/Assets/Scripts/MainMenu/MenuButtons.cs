@@ -10,8 +10,8 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] private GameObject[] descrArray;
     [SerializeField] private GameObject descrParent;
 
-    [SerializeField] private GameObject[] screenArray;
-    [SerializeField] private GameObject screenParent;
+    // [SerializeField] private GameObject[] screenArray;
+    // [SerializeField] private GameObject screenParent;
 
     [SerializeField] private Button prevBut;
     [SerializeField] private Button nextBut;
@@ -21,13 +21,13 @@ public class MenuButtons : MonoBehaviour
     private void Start() 
     {
         descrArray = new GameObject[5];
-        screenArray = new GameObject[5];
+        // screenArray = new GameObject[5];
         for(int i = 0; i < 5; i++)
         {
             descrArray[i] = descrParent.transform.GetChild(i).gameObject;
             descrArray[i].SetActive(false);
-            screenArray[i] = screenParent.transform.GetChild(i).gameObject;
-            screenArray[i].SetActive(false);
+            // screenArray[i] = screenParent.transform.GetChild(i).gameObject;
+            // screenArray[i].SetActive(false);
         }
 
 
@@ -60,7 +60,7 @@ public class MenuButtons : MonoBehaviour
     public void TutorialButton()
     {
         descrArray[0].SetActive(true);
-        screenArray[0].SetActive(true);
+        // screenArray[0].SetActive(true);
         Debug.Log("Обучение открыто, кстати я не хочу жить");
         tutorialPanel.SetActive(true);
     }
@@ -74,20 +74,20 @@ public class MenuButtons : MonoBehaviour
     public void TutorialNextGameDescription()
     {
         descrArray[index].SetActive(false);
-        screenArray[index].SetActive(false);
+        // screenArray[index].SetActive(false);
         index++;
         descrArray[index].SetActive(true);
-        screenArray[index].SetActive(true);
+        // screenArray[index].SetActive(true);
 
     }
 
     public void TutorialPrevGameDescription()
     {
         descrArray[index].SetActive(false);
-        screenArray[index].SetActive(false);
+        // screenArray[index].SetActive(false);
         index--;
         descrArray[index].SetActive(true);
-        screenArray[index].SetActive(true);
+        // screenArray[index].SetActive(true);
     }
 
     public void Exit()
