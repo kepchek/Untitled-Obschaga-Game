@@ -80,16 +80,16 @@ public class MinigameSystem : MonoBehaviour
         float delay = UnityEngine.Random.Range(minDelay, maxDelay);//Создаём переменную плавающей задержки
         while (true)
         {
-            randomMGvalue = UnityEngine.Random.Range(0, 22); //СВыбираем рандомный минигейм согласно таблице ценностей
+            randomMGvalue = UnityEngine.Random.Range(0, 22); //Выбираем рандомный минигейм согласно таблице ценностей
             Debug.Log(randomMGvalue);
             if((randomMGvalue >= 0) & (randomMGvalue <= 6)) //Выбор миниигры посредством случайного числа и ценности миниигры
             {
-                //кликер
+                StartMinigame3();
                 Debug.Log("Кликер");
             }
             else if((randomMGvalue > 6) & (randomMGvalue <= 11))
             {
-                //роутер
+                StartMinigame0();
                 Debug.Log("Роутер");
             }
             else if((randomMGvalue > 11) & (randomMGvalue <= 15))
@@ -99,12 +99,12 @@ public class MinigameSystem : MonoBehaviour
             }
             else if((randomMGvalue > 15) & (randomMGvalue <= 19))
             {
-                //носки
+                StartMinigame1();
                 Debug.Log("Носки");
             }
             else if((randomMGvalue > 19) & (randomMGvalue <= 21))
             {   
-                //водка
+                StartMinigame2();
                 Debug.Log("Водка");
             }
             yield return new WaitForSeconds(delay);
