@@ -44,8 +44,12 @@ public class ButtonsMinigame : MonoBehaviour
     }
     void OnEnable()
     {
-        combination = "111111111";//Random.Range(100000000, 999999999).ToString();
+        combination = Random.Range(100000000, 999999999).ToString().Replace("0", "1"); 
+        // у меня нет кнопки которая отвечает за ноль, вот такие пироги...
+        Debug.Log(combination);
 
+
+        // ещё одно ублюдство но ебал я щас разбираться с делегатами
         B1.onClick.AddListener(() => UnClick("1"));
         B2.onClick.AddListener(() => UnClick("2"));
         B3.onClick.AddListener(() => UnClick("3"));
@@ -69,12 +73,12 @@ public class ButtonsMinigame : MonoBehaviour
         {
             if(combination == userInput)
             {
-                Scores.ChangeScore(10);
+                Scores.ChangeScore(20);
                 ExitMinigame4();
             }
             else
             {
-                Scores.ChangeScore(-10);
+                Scores.ChangeScore(-20);
                 ExitMinigame4();
             }
         }
