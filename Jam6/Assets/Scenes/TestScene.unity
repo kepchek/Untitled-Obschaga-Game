@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1944828817}
   whatIsGame: {fileID: 723546463}
-  startTimer: 10
+  startTimer: 40
 --- !u!1 &389558657
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,7 +7473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9385f950140e04e40afd31d335011df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Minigame3GameArea: {fileID: 1380101870}
+  Minigame3GameArea: {fileID: 1110990561}
   MinigameTrigger3: {fileID: 0}
   progressBar: {fileID: 0}
 --- !u!114 &1110990567
@@ -7490,7 +7490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBar: {fileID: 845515538}
   whatIsGame: {fileID: 1380101870}
-  startTimer: 3
+  startTimer: 20
 --- !u!1 &1112502694
 GameObject:
   m_ObjectHideFlags: 0
@@ -12192,7 +12192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBar: {fileID: 393678134}
   whatIsGame: {fileID: 918999767}
-  startTimer: 5
+  startTimer: 15
 --- !u!1 &1983780111
 GameObject:
   m_ObjectHideFlags: 0
