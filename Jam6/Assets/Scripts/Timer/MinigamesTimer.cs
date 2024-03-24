@@ -40,18 +40,22 @@ public class MinigamesTimer : MonoBehaviour
             {
                 case "Minigame0":
                     Debug.Log(whatIsGame.name);
+                    Scores.ChangeScore(-10);
                     GameObject.Find("Router Canvas").GetComponent<Router>().ExitMinigame0();
                     break;
                 case "Minigame1":
                     Debug.Log(whatIsGame.name);
+                    Scores.ChangeScore(-20);
                     GameObject.Find("Trash").GetComponent<ItemSlot>().ExitMinigame1();
                     break;
                 case "Minigame2":
                     Debug.Log(whatIsGame.name);
-                    GameObject.Find("Fishing Canvas").GetComponent<MovingSquare>().ExitMinigame2();
+                    Scores.ChangeScore(-50);
+                    GameObject.Find("FishPlayer").GetComponent<MovingSquare>().ExitMinigame2();
                     break;
                 case "Minigame3":
                     Debug.Log(whatIsGame.name);
+                    Scores.ChangeScore(-7);
                     GameObject.Find("Studies Canvas").GetComponent<Clicker>().ExitMinigame3();
                     break;
             }

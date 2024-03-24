@@ -22,6 +22,7 @@ public class Clicker : MonoBehaviour
         progressBar.value = progress;
         if (progress >= 10)
         {
+            Scores.ChangeScore(7);
             ExitMinigame3();
         }
         if (Input.GetKeyDown(KeyCode.Space))

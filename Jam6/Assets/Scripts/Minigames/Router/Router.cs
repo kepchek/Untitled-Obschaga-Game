@@ -60,14 +60,14 @@ public class Router : MonoBehaviour
     {
         if(TxtWithIP.text == IpAddressField.text) 
         {
-            Scores.ChangeScore(5);
+            Scores.ChangeScore(10);
             BuffSystem.isBuffReady = true;
             ExitMinigame0();
         }
         else
         {
             ErrorTXT.SetActive(true);
-            Scores.ChangeScore(-5);
+            Scores.ChangeScore(-10);
             IpAddressField.text = "";
             IpAddressField.Select();
         }
