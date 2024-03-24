@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class MinigameSystem : MonoBehaviour
 {
-    public GameObject MinigameTrigger0;
+    //Создаём переменные объектов-триггеров
+    public GameObject MinigameTrigger0; 
     public GameObject MinigameTrigger1;
     public GameObject MinigameTrigger2;
     public GameObject MinigameTrigger3;
@@ -20,7 +21,7 @@ public class MinigameSystem : MonoBehaviour
 
     private void Awake() 
     {
-        Debug.Log(randomMGvalue);
+        //Находим и присваиваем значения объектам-триггерам
         MinigameTrigger0 = GameObject.Find("MinigameTrigger0");
         MinigameTrigger1 = GameObject.Find("MinigameTrigger1");
         MinigameTrigger2 = GameObject.Find("MinigameTrigger2");
@@ -42,7 +43,8 @@ public class MinigameSystem : MonoBehaviour
         }
         
     }
-
+    //Запускаем готовноость начать миниигру
+    //Необходимо перекинуть это говнище в корутин
     public void StartMinigame0()
     {
         MinigameTrigger0.GetComponent<InteractTrigger>().TriggerIsEnabled = true;
@@ -75,10 +77,10 @@ public class MinigameSystem : MonoBehaviour
         Водка - 2
 
         */
-        float delay = UnityEngine.Random.Range(minDelay, maxDelay);
+        float delay = UnityEngine.Random.Range(minDelay, maxDelay);//Создаём переменную плавающей задержки
         while (true)
         {
-            randomMGvalue = UnityEngine.Random.Range(0, 22);
+            randomMGvalue = UnityEngine.Random.Range(0, 22); //СВыбираем рандомный минигейм согласно таблице ценностей
             Debug.Log(randomMGvalue);
             if((randomMGvalue >= 0) & (randomMGvalue <= 6)) //Выбор миниигры посредством случайного числа и ценности миниигры
             {
@@ -106,7 +108,7 @@ public class MinigameSystem : MonoBehaviour
                 Debug.Log("Водка");
             }
             yield return new WaitForSeconds(delay);
-            delay = Mathf.Max(minDelay, delay - delayDecrease);
+            delay = Mathf.Max(minDelay, delay - delayDecrease); //Уменьшаем задержку с каждым циклом для нарастания хардкорности
         }
 
         

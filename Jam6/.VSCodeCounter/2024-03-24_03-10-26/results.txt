@@ -1,0 +1,52 @@
+Date : 2024-03-24 03:10:26
+Directory : d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts
+Total : 18 files,  779 codes, 42 comments, 146 blanks, all 967 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         18 |        779 |         42 |        146 |        967 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                         | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                            |         18 |        779 |         42 |        146 |        967 |
+| Minigames                                                                                    |         11 |        522 |         41 |        101 |        664 |
+| Minigames\MinigamesSystem                                                                    |          1 |         86 |         25 |         17 |        128 |
+| Minigames\Router                                                                             |          1 |         91 |          2 |         20 |        113 |
+| Minigames\Socks                                                                              |          3 |        112 |          2 |         24 |        138 |
+| Minigames\Studies Clicker                                                                    |          1 |         25 |          1 |          5 |         31 |
+| Minigames\Vodka                                                                              |          2 |         94 |          4 |         12 |        110 |
+| Minigames\Wires                                                                              |          3 |        114 |          7 |         23 |        144 |
+| Player                                                                                       |          3 |        154 |          1 |         23 |        178 |
+| Scores                                                                                       |          1 |         24 |          0 |          5 |         29 |
+| Timer                                                                                        |          3 |         79 |          0 |         17 |         96 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                     | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\MinigamesSystem\MinigameSystem.cs | C#       |         86 |         25 |         17 |        128 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Router\Router.cs                  | C#       |         91 |          2 |         20 |        113 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Socks\DragAndDrop.cs              | C#       |         41 |          1 |          5 |         47 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Socks\ItemSlot.cs                 | C#       |         34 |          1 |          8 |         43 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Socks\ReturnSocks.cs              | C#       |         37 |          0 |         11 |         48 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Studies Clicker\Clicker.cs        | C#       |         25 |          1 |          5 |         31 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Vodka\GradusMoving.cs             | C#       |         32 |          1 |          4 |         37 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Vodka\MovingSquare.cs             | C#       |         62 |          3 |          8 |         73 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Wires\DrawLine.cs                 | C#       |         24 |          0 |          5 |         29 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Wires\WiresDragDrop.cs            | C#       |         41 |          2 |          7 |         50 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Minigames\Wires\WiresSlot.cs                | C#       |         49 |          5 |         11 |         65 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Player\BuffSystem.cs                        | C#       |         32 |          0 |          5 |         37 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Player\Control.cs                           | C#       |         59 |          1 |          9 |         69 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Player\InteractTrigger.cs                   | C#       |         63 |          0 |          9 |         72 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Scores\Scores.cs                            | C#       |         24 |          0 |          5 |         29 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Timer\AddTime.cs                            | C#       |         15 |          0 |          3 |         18 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Timer\MinigamesTimer.cs                     | C#       |         35 |          0 |          8 |         43 |
+| d:\progs\unity\projects\Jam6\Jam6\Assets\Scripts\Timer\Timer.cs                              | C#       |         29 |          0 |          6 |         35 |
+| Total                                                                                        |          |        779 |         42 |        146 |        967 |
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
