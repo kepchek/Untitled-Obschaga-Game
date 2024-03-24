@@ -24,7 +24,7 @@ public class Clicker : MonoBehaviour
     void Update()
     {
         progressBar.value = progress;
-        if (progress >= 10)
+        if (progress >= 15)
         {
             Scores.ChangeScore(7);
             ExitMinigame3();
