@@ -2936,9 +2936,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1944828817}
-  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 723546463}
-  startTimer: 40
+  startTimer: 30
 --- !u!1 &361298358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,7 +3513,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
@@ -3624,7 +3623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bfa17a3519ac240aa12a002f54f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 2.5
+  jumpForce: 4
   MinigameTrigger2: {fileID: 0}
   Minigame2GameArea: {fileID: 359685290}
   progressSlider: {fileID: 199381402}
@@ -6204,9 +6203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1088290674}
-  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 70662378}
-  startTimer: 5
+  startTimer: 8
 --- !u!1 &780299986
 GameObject:
   m_ObjectHideFlags: 0
@@ -9381,9 +9379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 845515538}
-  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 1380101870}
-  startTimer: 20
+  startTimer: 5
 --- !u!1 &1112502694
 GameObject:
   m_ObjectHideFlags: 0
@@ -11276,9 +11273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1846233998}
-  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 389558657}
-  startTimer: 20
+  startTimer: 15
 --- !u!1 &1451330309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15316,9 +15312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1768344244}
-  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 918999767}
-  startTimer: 15
+  startTimer: 10
 --- !u!1 &1983780111
 GameObject:
   m_ObjectHideFlags: 0
