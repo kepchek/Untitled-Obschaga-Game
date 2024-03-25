@@ -40,7 +40,7 @@ public class MenuButtons : MonoBehaviour
         {
             prevBut.interactable = false;
         }
-        else if(index == 2)
+        else if(index == 4)
         {
             nextBut.interactable = false;
         }
