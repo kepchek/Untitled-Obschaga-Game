@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -20,14 +22,14 @@ public class Timer : MonoBehaviour
         timeStart += 10;
     }
 
-    public static float timeStart = 60;
+    public static float timeStart = 300;
     public TMP_Text timerText;
     void Start()
     {
         timerText.text = timeStart.ToString();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         TimerOut();
     }

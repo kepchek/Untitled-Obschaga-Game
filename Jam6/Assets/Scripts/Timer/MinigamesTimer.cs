@@ -7,6 +7,7 @@ public class MinigamesTimer : MonoBehaviour
 {
     public Slider timeBar;
 
+
     public GameObject whatIsGame;
 
     // public GameObject game;
@@ -26,6 +27,7 @@ public class MinigamesTimer : MonoBehaviour
         timeBar.interactable = false;
         timeBar.maxValue = startTimer;
     }
+
 
     public void TimerOut()
     {

@@ -2461,7 +2461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &359685291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2564,6 +2564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1944828817}
+  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 723546463}
   startTimer: 40
 --- !u!1 &361298358
@@ -5564,8 +5565,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1088290674}
+  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 70662378}
-  startTimer: 5
+  startTimer: 1000
 --- !u!4 &781689121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e962164674bea84408e7680008051ea7, type: 3}
@@ -7893,6 +7895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 845515538}
+  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 1380101870}
   startTimer: 20
 --- !u!1 &1112502694
@@ -8820,7 +8823,7 @@ RectTransform:
   m_Father: {fileID: 917401553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9470,6 +9473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1846233998}
+  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 389558657}
   startTimer: 20
 --- !u!1 &1451330309
@@ -9787,7 +9791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1471032609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11313,7 +11317,7 @@ RectTransform:
   m_Father: {fileID: 34543556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12995,6 +12999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBar: {fileID: 1768344244}
+  TimerScoreCnvs: {fileID: 1471032608}
   whatIsGame: {fileID: 918999767}
   startTimer: 15
 --- !u!1 &1983780111
