@@ -52,7 +52,7 @@ public class MinigamesTimer : MonoBehaviour
                 case "Minigame2":
                     Debug.Log(whatIsGame.name);
                     Scores.ChangeScore(-50);
-                    GameObject.Find("FishPlayer").GetComponent<MovingSquare>().ExitMinigame2();
+                    GameObject.Find("VodkaPlayer").GetComponent<MovingSquare>().ExitMinigame2();
                     break;
                 case "Minigame3":
                     Debug.Log(whatIsGame.name);

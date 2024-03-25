@@ -13,8 +13,8 @@ public class MinigameSystem : MonoBehaviour
     public GameObject MinigameTrigger3;
     public GameObject MinigameTrigger4;
     int randomMGvalue; //Случайный выбор числа, для выбора миниигры
-    public float minDelay = 10f;
-    public float maxDelay = 20.1f;
+    public float minDelay = 5f;
+    public float maxDelay = 10f;
     public float delayDecrease = 0.1f;
     
 
