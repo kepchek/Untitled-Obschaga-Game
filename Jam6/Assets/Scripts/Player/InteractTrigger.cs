@@ -12,7 +12,7 @@ public class InteractTrigger : MonoBehaviour
     void Awake() 
     {
         PlayerInRange = false;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
     private void Update() 
     {
@@ -27,10 +27,11 @@ public class InteractTrigger : MonoBehaviour
     {
         if(TriggerIsEnabled)
         {
+            anim.SetBool("TriggerIsEnabled", true);
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = true;
-                //anim.SetBool("PlayerInRange", true); //Меняем спрайт миниигры на обведённый
+                anim.SetBool("PlayerInRange", true); //Меняем спрайт миниигры на обведённый
                 Debug.Log("Player in range");
             }
         }
@@ -40,10 +41,11 @@ public class InteractTrigger : MonoBehaviour
     {
         if(TriggerIsEnabled)
         {
+            anim.SetBool("TriggerIsEnabled", false);
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = false;
-                //anim.SetBool("PlayerInRange", false);
+                anim.SetBool("PlayerInRange", false);
                 Debug.Log("Player out range");
             }
         }
