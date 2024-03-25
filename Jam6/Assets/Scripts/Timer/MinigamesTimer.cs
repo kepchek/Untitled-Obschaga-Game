@@ -24,6 +24,7 @@ public class MinigamesTimer : MonoBehaviour
     {
         timecount = startTimer;
         timeBar.interactable = false;
+        timeBar.maxValue = startTimer;
     }
 
     public void TimerOut()
