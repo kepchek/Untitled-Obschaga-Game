@@ -27,7 +27,11 @@ public class Router : MonoBehaviour
     }
     void OnEnable() // когда окно включается генерится новый айпишник
     {
+
         cnvs.SetActive(true);
+
+        //ActiveBlyatInput();
+        IpAddressField.ActivateInputField();
 
         IpAddressField.onValueChanged.AddListener(IpValueChanged);
 
@@ -35,16 +39,25 @@ public class Router : MonoBehaviour
 
         TxtWithIP.text = RndIP.ToString("### ### ###").Replace(" ", ".");
 
-        IpAddressField.Select();
+    }
+
+    void Start()
+    {
+        //ActiveBlyatInput();
+        IpAddressField.ActivateInputField();
     }
 
     private void Awake() 
     {
+        //ActiveBlyatInput();
         MinigameTrigger0 = GameObject.Find("MinigameTrigger0");
     }
 
     void Update()
     {
+        IpAddressField.ActivateInputField();
+        //ActiveBlyatInput();
+        
         if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
         {
             Click();
@@ -58,6 +71,7 @@ public class Router : MonoBehaviour
 
     public void Click() // проверяет соответствие введённой строки и сгенеренного айпишника
     {
+        IpAddressField.Select();
         if(TxtWithIP.text == IpAddressField.text) 
         {
             Scores.ChangeScore(10);
@@ -71,6 +85,11 @@ public class Router : MonoBehaviour
             IpAddressField.text = "";
             IpAddressField.Select();
         }
+    }
+
+    void ActiveBlyatInput()
+    {
+        IpAddressField.Select();
     }
 
 // хуйню ниже не трогай я не ебу как она работает
