@@ -54,9 +54,6 @@ public class ButtonsMinigame : MonoBehaviour
 
         Combin.text = combination;
 
-        Debug.Log(combination);
-
-
         // ещё одно ублюдство но ебал я щас разбираться с делегатами
         B1.onClick.AddListener(() => UnClick("1"));
         B2.onClick.AddListener(() => UnClick("2"));
@@ -67,6 +64,10 @@ public class ButtonsMinigame : MonoBehaviour
         B7.onClick.AddListener(() => UnClick("7"));
         B8.onClick.AddListener(() => UnClick("8"));
         B9.onClick.AddListener(() => UnClick("9"));
+
+        Debug.Log(combination);
+        Debug.Log(userInput);
+        Debug.Log(counter);
     }
     void Update()
     {
