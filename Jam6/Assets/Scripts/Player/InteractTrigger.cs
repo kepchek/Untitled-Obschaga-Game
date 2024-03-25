@@ -1,31 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractTrigger : MonoBehaviour
 {
     [SerializeField] int MiniGameKey;
     public static bool PlayerInRange;
     private Animator anim;
+    public float MgEnabledTime = 6f;
+    public GameObject pointer;
     public bool TriggerIsEnabled = false; //Переменная означающая готовность скрипта-триггера работать
 
     void Awake() 
     {
         PlayerInRange = false;
         anim = GetComponent<Animator>();
+        pointer.SetActive(false);
     }
+
     private void Update() 
     {
         if(TriggerIsEnabled)
         {
-            ChooseMinigame();
-            anim.SetBool("TriggerIsEnabled", true);
+            if(MgEnabledTime > 0)
+            {
+                pointer.SetActive(true);
+                MgEnabledTime -= Time.deltaTime;
+                ChooseMinigame();
+                anim.SetBool("TriggerIsEnabled", true);   
+            }
+            else
+            {
+                pointer.SetActive(false);
+                TriggerIsEnabled = false;
+            }
         }
         else
         {
             anim.SetBool("TriggerIsEnabled", false);
         }
     }
+
+
 
     
     private void OnTriggerEnter(Collider other) //Игрок вошёл в триггер миниигры
