@@ -61,7 +61,7 @@ public class Router : MonoBehaviour
         if(TxtWithIP.text == IpAddressField.text) 
         {
             Scores.ChangeScore(10);
-            BuffSystem.isBuffReady = true;
+            //BuffSystem.isBuffReady = true;
             ExitMinigame0();
         }
         else

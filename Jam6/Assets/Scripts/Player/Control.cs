@@ -43,14 +43,9 @@ public class Control : MonoBehaviour
         {
             anim.SetBool("isMoveX", true);
         }
-        if(BuffSystem.Buff)//Ускорение, если бафф активен
-        {
-            rb.velocity = new Vector3(movevector.x, 0 , movevector.z).normalized*speed*1.3f;
-        }
-        else
-        {
-            rb.velocity = new Vector3(movevector.x, 0 , movevector.z).normalized*speed;
-        }
+        
+        rb.velocity = new Vector3(movevector.x, 0 , movevector.z).normalized*speed;
+
     }
 
     public void CheckForInteract()//Проверка на взаимодействие
