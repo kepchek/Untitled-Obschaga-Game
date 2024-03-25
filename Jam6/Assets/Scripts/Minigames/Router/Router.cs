@@ -30,7 +30,6 @@ public class Router : MonoBehaviour
 
         cnvs.SetActive(true);
 
-        //ActiveBlyatInput();
         IpAddressField.ActivateInputField();
 
         IpAddressField.onValueChanged.AddListener(IpValueChanged);
@@ -43,20 +42,18 @@ public class Router : MonoBehaviour
 
     void Start()
     {
-        //ActiveBlyatInput();
         IpAddressField.ActivateInputField();
     }
 
     private void Awake() 
     {
-        //ActiveBlyatInput();
         MinigameTrigger0 = GameObject.Find("MinigameTrigger0");
     }
 
     void Update()
     {
         IpAddressField.ActivateInputField();
-        //ActiveBlyatInput();
+
         
         if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
         {
@@ -87,10 +84,6 @@ public class Router : MonoBehaviour
         }
     }
 
-    void ActiveBlyatInput()
-    {
-        IpAddressField.Select();
-    }
 
 // хуйню ниже не трогай я не ебу как она работает
     private void IpValueChanged(string svalue)
