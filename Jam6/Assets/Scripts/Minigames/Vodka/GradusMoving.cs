@@ -11,8 +11,8 @@ public class GradusMoving : MonoBehaviour
 
     int chance = 100;
 
-    float maxY = 459; // верхняя граница в которую уприрается объект
-    float minY = 122; // догадайся блять
+    float maxY = 710; // верхняя граница в которую уприрается объект
+    float minY = 373; // догадайся блять
 
     void Awake() // запоминаем стартовую позицию
     {
