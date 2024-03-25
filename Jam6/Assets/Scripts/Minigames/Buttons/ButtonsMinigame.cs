@@ -41,6 +41,16 @@ public class ButtonsMinigame : MonoBehaviour
     }
     public void ExitMinigame4()
     {
+        B1.onClick.RemoveAllListeners();
+        B2.onClick.RemoveAllListeners();
+        B3.onClick.RemoveAllListeners();
+        B4.onClick.RemoveAllListeners();
+        B5.onClick.RemoveAllListeners();
+        B6.onClick.RemoveAllListeners();
+        B7.onClick.RemoveAllListeners();
+        B8.onClick.RemoveAllListeners();
+        B9.onClick.RemoveAllListeners();
+        
         counter = 0;
         userInput = "";
         gameArea.SetActive(false);
