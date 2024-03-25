@@ -35,6 +35,7 @@ public class InteractTrigger : MonoBehaviour
             {
                 pointer.SetActive(false);
                 TriggerIsEnabled = false;
+                MgEnabledTime = 6f;
             }
         }
         else
