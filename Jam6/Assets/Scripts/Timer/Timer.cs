@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
         timeStart += 10;
     }
 
-    public static float timeStart = 300;
+    public static float timeStart = 200;
     public TMP_Text timerText;
     void Start()
     {
