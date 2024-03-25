@@ -41,6 +41,8 @@ public class InteractTrigger : MonoBehaviour
         else
         {
             anim.SetBool("TriggerIsEnabled", false);
+            MgEnabledTime = 6f;
+            pointer.SetActive(false);
         }
     }
 
