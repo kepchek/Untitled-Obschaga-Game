@@ -91,7 +91,7 @@ public class MinigameSystem : MonoBehaviour
                 StartMinigame0();
                 Debug.Log("Роутер");
             }
-            else if((randomMGvalue > 11) & (randomMGvalue <= 15))
+            else if((randomMGvalue > 11) & (randomMGvalue <= 21))
             {
                 StartMinigame4();
                 Debug.Log("Удлинитель бля");
