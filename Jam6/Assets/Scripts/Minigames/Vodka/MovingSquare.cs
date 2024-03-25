@@ -10,6 +10,7 @@ public class MovingSquare : MonoBehaviour
     bool progressIsActive;
     float progress;
     int progressSpeed = 8;
+    public Rigidbody2D rb;
     [SerializeField]private float jumpForce = 0.2f;
 
     public GameObject MinigameTrigger2;
@@ -25,13 +26,14 @@ public class MovingSquare : MonoBehaviour
     private void Awake() 
     {
         MinigameTrigger2 = GameObject.Find("MinigameTrigger2");
+        rb.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) // движение куба вверх вниз
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0)) // движение куба вверх вниз
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         progressSlider.value = progress; // слайдер берёт значение (в рот)
     }

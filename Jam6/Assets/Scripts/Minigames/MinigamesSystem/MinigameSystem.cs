@@ -79,7 +79,7 @@ public class MinigameSystem : MonoBehaviour
         float delay = UnityEngine.Random.Range(minDelay, maxDelay);//Создаём переменную плавающей задержки
         while (true)
         {
-            randomMGvalue = UnityEngine.Random.Range(0, 23); //Выбираем рандомный минигейм согласно таблице ценностей
+            randomMGvalue = UnityEngine.Random.Range(0, 24); //Выбираем рандомный минигейм согласно таблице ценностей
             Debug.Log($"Случайное число - {randomMGvalue}");
             if((randomMGvalue >= 0) & (randomMGvalue <= 5)) //Выбор миниигры посредством случайного числа и ценности миниигры
             {
@@ -101,7 +101,7 @@ public class MinigameSystem : MonoBehaviour
                 StartMinigame1();
                 Debug.Log("Носки");
             }
-            else if((randomMGvalue > 20) & (randomMGvalue <= 23))
+            else if((randomMGvalue > 20) & (randomMGvalue <= 24))
             {   
                 StartMinigame2();
                 Debug.Log("Водка");
