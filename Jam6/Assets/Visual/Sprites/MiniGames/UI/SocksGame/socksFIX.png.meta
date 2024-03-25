@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51f55df66f6879747a3356971e499d13
+guid: 5942e270c5e6ea74b845d6daa40284ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buckets_0
+      name: socksFIX_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 48
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5dc89aca59a0643a4c06162d8e3d32
-      internalID: 1795072176
+      spriteID: 0f17f15ef100ff44c875d5aaa6b27883
+      internalID: 1364016457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buckets_1
+      name: socksFIX_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 0
-        width: 64
+        width: 48
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14c6c57c1fb8a5d4282e992cfad88b81
-      internalID: 194002841
+      spriteID: 842c41152ae449540b3429faf5967121
+      internalID: -2034496555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buckets_2
+      name: socksFIX_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 0
-        width: 64
+        width: 48
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e61ef64ba42d6c4d8883789c8a63906
-      internalID: -685398960
+      spriteID: fbafcc2583f023f4bb1e6f8284dc0072
+      internalID: 384234348
       vertices: []
       indices: 
       edges: []
@@ -175,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: db028d9d703d463478c374f71d08fee8
+    spriteID: 21cd956029f148d4b893b617e231af99
     internalID: 0
     vertices: []
     indices: 
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      buckets_0: 1795072176
-      buckets_1: 194002841
-      buckets_2: -685398960
+      socksFIX_0: 1364016457
+      socksFIX_1: -2034496555
+      socksFIX_2: 384234348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

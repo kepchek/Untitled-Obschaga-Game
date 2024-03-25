@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 572fd33d5f3eb9d41a31aa0491152f9f
+guid: 946e1a8c9cc20534f8f99ef557943da6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: socks_0
+      name: BucketsFIX (2)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c606163f83295fb45ae239fd9e9d4640
-      internalID: -708390412
+      spriteID: 1f47605acb3a7c4408668457450fb116
+      internalID: 786863485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: socks_1
+      name: BucketsFIX (2)_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 48
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6187c96a4c71e8f4c9f8c0d9eb6e14be
-      internalID: 529303176
+      spriteID: f4ef7a992c4c9d34bb09ff22d43767b2
+      internalID: -1334194765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: socks_2
+      name: BucketsFIX (2)_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 48
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afbefcbec809b174aa014da416cc0575
-      internalID: 1081759613
+      spriteID: 058aad8d521537947922f01d23228717
+      internalID: -1890210724
       vertices: []
       indices: 
       edges: []
@@ -175,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e1fe260c6715d6d4fb8a24f63ddbf075
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      socks_0: -708390412
-      socks_1: 529303176
-      socks_2: 1081759613
+      BucketsFIX (2)_0: 786863485
+      BucketsFIX (2)_1: -1334194765
+      BucketsFIX (2)_2: -1890210724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
