@@ -8,12 +8,28 @@ using System;
 
 public class Timer : MonoBehaviour
 {
+
+    [SerializeField] GameObject LoseMenu;
+    [SerializeField] GameObject WinMenu;
     public void TimerOut()
     {
         if (timeStart > 0)
         {
             timeStart -= Time.deltaTime;
             timerText.text = Mathf.Round(timeStart).ToString();
+        }
+        else
+        {
+            if(Scores.GetScore() > 0)
+            {
+                Time.timeScale = 0f;
+                WinMenu.SetActive(true);
+            }
+            else 
+            {
+                LoseMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
         }
     }
 

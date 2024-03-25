@@ -6,18 +6,10 @@ using UnityEngine.UI;
 
 public class EndMenu : MonoBehaviour
 {
-    public void Restart()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void Menu()
-    {
-        SceneManager.LoadScene(0);
-    }
-
     public void Exit()
     {
+        Time.timeScale = 1f;
         Application.Quit();
+        Debug.Log("бб");
     }
 }

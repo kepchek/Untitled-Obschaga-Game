@@ -25,4 +25,14 @@ public class Scores : MonoBehaviour
         ScoreCount += score;
         return ScoreCount;
     }
+
+    public static int GetScore()
+    {
+        return ScoreCount;
+    }
+
+    public static void ResetScore()
+    {
+        ScoreCount = 0;
+    }
 }
