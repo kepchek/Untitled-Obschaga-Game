@@ -80,6 +80,7 @@ public class MinigameSystem : MonoBehaviour
         while (true)
         {
             randomMGvalue = UnityEngine.Random.Range(0, 22); //Выбираем рандомный минигейм согласно таблице ценностей
+            Debug.Log($"Случайное число - {randomMGvalue}");
             if((randomMGvalue >= 0) & (randomMGvalue <= 6)) //Выбор миниигры посредством случайного числа и ценности миниигры
             {
                 StartMinigame3();

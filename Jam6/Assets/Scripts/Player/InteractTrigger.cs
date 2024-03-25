@@ -19,6 +19,11 @@ public class InteractTrigger : MonoBehaviour
         if(TriggerIsEnabled)
         {
             ChooseMinigame();
+            anim.SetBool("TriggerIsEnabled", true);
+        }
+        else
+        {
+            anim.SetBool("TriggerIsEnabled", false);
         }
     }
 
@@ -27,7 +32,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if(TriggerIsEnabled)
         {
-            anim.SetBool("TriggerIsEnabled", true);
+            
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = true;
@@ -41,7 +46,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if(TriggerIsEnabled)
         {
-            anim.SetBool("TriggerIsEnabled", false);
+            
             if(other.gameObject.tag == "Player")
             {
                 PlayerInRange = false;
