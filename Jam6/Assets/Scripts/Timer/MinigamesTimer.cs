@@ -47,7 +47,7 @@ public class MinigamesTimer : MonoBehaviour
                 case "Minigame1":
                     Debug.Log(whatIsGame.name);
                     Scores.ChangeScore(-20);
-                    GameObject.Find("Trash").GetComponent<ItemSlot>().ExitMinigame1();
+                    GameObject.Find("BasketGreen").GetComponent<ItemSlot>().ExitMinigame1(); // тут в кавычках название не канваса, а одной из карзин. не спрашивай, я сам знаю чтоо это пиздец
                     break;
                 case "Minigame2":
                     Debug.Log(whatIsGame.name);

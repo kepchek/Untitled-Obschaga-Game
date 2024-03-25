@@ -27,7 +27,10 @@ public class Router : MonoBehaviour
     }
     void OnEnable() // когда окно включается генерится новый айпишник
     {
+
         cnvs.SetActive(true);
+
+        IpAddressField.ActivateInputField();
 
         IpAddressField.onValueChanged.AddListener(IpValueChanged);
 
@@ -35,7 +38,11 @@ public class Router : MonoBehaviour
 
         TxtWithIP.text = RndIP.ToString("### ### ###").Replace(" ", ".");
 
-        IpAddressField.Select();
+    }
+
+    void Start()
+    {
+        IpAddressField.ActivateInputField();
     }
 
     private void Awake() 
@@ -45,6 +52,9 @@ public class Router : MonoBehaviour
 
     void Update()
     {
+        IpAddressField.ActivateInputField();
+
+        
         if (Input.GetKeyDown(KeyCode.Return)) // клик работает по энтеру
         {
             Click();
@@ -58,6 +68,7 @@ public class Router : MonoBehaviour
 
     public void Click() // проверяет соответствие введённой строки и сгенеренного айпишника
     {
+        IpAddressField.Select();
         if(TxtWithIP.text == IpAddressField.text) 
         {
             Scores.ChangeScore(10);
@@ -72,6 +83,7 @@ public class Router : MonoBehaviour
             IpAddressField.Select();
         }
     }
+
 
 // хуйню ниже не трогай я не ебу как она работает
     private void IpValueChanged(string svalue)
