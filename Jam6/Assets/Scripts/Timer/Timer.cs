@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            if(Scores.GetScore() > 200)
+            if(Scores.GetScore() > 150)
             {
                 Time.timeScale = 0f;
                 WinMenu.SetActive(true);
