@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Clicker : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class Clicker : MonoBehaviour
         progressBar.value = progress;
         if (progress >= 15)
         {
-            Scores.ChangeScore(7);
+            Scores.ChangeScore(Convert.ToInt32(22 * MinigamesTimer.GetTimerValue()));
             ExitMinigame3();
         }
         if (Input.GetKeyDown(KeyCode.Space))

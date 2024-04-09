@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            if(Scores.GetScore() > 0)
+            if(Scores.GetScore() > 200)
             {
                 Time.timeScale = 0f;
                 WinMenu.SetActive(true);
@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
         timeStart += 10;
     }
 
-    public static float timeStart = 200;
+    public static float timeStart = 90;
     public TMP_Text timerText;
     void Start()
     {

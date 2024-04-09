@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class ButtonsMinigame : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class ButtonsMinigame : MonoBehaviour
     }
     void OnEnable()
     {
-        combination = Random.Range(100000000, 999999999).ToString().Replace("0", "1"); 
+        combination = UnityEngine.Random.Range(100000000, 999999999).ToString().Replace("0", "1"); 
         // у меня нет кнопки которая отвечает за ноль, вот такие пироги...
 
         Combin.text = combination;
@@ -92,12 +93,12 @@ public class ButtonsMinigame : MonoBehaviour
         {
             if(combination == userInput)
             {
-                Scores.ChangeScore(20);
+                Scores.ChangeScore(Convert.ToInt32(35 * MinigamesTimer.GetTimerValue()));
                 ExitMinigame4();
             }
             else
             {
-                Scores.ChangeScore(-20);
+                Scores.ChangeScore(-35);
                 ExitMinigame4();
             }
         }
