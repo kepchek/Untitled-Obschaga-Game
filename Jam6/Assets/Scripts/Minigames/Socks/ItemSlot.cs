@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
@@ -37,7 +38,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 counter++;
                 if (counter == 6)
                 {
-                    Scores.ChangeScore(20);
+                    Scores.ChangeScore(Convert.ToInt32(35 * MinigamesTimer.GetTimerValue()));
                     eventData.pointerDrag.GetComponent<CanvasGroup>().blocksRaycasts = true; // почему то полсдений объект при повторном запуске выключал себе эту галочку, другого способа фикса я не нашёл
                     ExitMinigame1();
                 }
@@ -45,7 +46,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             else
             {
                 // ты проиграл, выдаётся дебаф
-                Scores.ChangeScore(-20);
+                Scores.ChangeScore(-35);
                 eventData.pointerDrag.GetComponent<CanvasGroup>().blocksRaycasts = true;
                 ExitMinigame1();
             }

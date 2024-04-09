@@ -16,6 +16,10 @@ public class MinigamesTimer : MonoBehaviour
 
     float timecount;
 
+    static float static_startTimer;
+
+    static float static_timercount; // крч эта хуета мне нужна чтобы передавать значение таймера в другие скрипты через метод
+
     // void Awake()
     // {
     //     game = GameObject.Find("Router Canvas");
@@ -26,6 +30,8 @@ public class MinigamesTimer : MonoBehaviour
         timecount = startTimer;
         timeBar.interactable = false;
         timeBar.maxValue = startTimer;
+
+        static_startTimer = startTimer;
     }
 
 
@@ -34,6 +40,7 @@ public class MinigamesTimer : MonoBehaviour
         if (timecount > 0)
         {
             timecount -= Time.deltaTime;
+            static_timercount = timecount;
             timeBar.value = timecount;
         }
         else
@@ -43,27 +50,27 @@ public class MinigamesTimer : MonoBehaviour
             {
                 case "Minigame0":
                     Debug.Log(whatIsGame.name);
-                    Scores.ChangeScore(-10);
+                    Scores.ChangeScore(-25);
                     GameObject.Find("Router Canvas").GetComponent<Router>().ExitMinigame0();
                     break;
                 case "Minigame1":
                     Debug.Log(whatIsGame.name);
-                    Scores.ChangeScore(-20);
+                    Scores.ChangeScore(-35);
                     GameObject.Find("BasketGreen").GetComponent<ItemSlot>().ExitMinigame1(); // тут в кавычках название не канваса, а одной из карзин. не спрашивай, я сам знаю чтоо это пиздец
                     break;
                 case "Minigame2":
                     Debug.Log(whatIsGame.name);
-                    Scores.ChangeScore(-50);
+                    Scores.ChangeScore(-65);
                     GameObject.Find("VodkaPlayer").GetComponent<MovingSquare>().ExitMinigame2();
                     break;
                 case "Minigame3":
                     Debug.Log(whatIsGame.name);
-                    Scores.ChangeScore(-7);
+                    Scores.ChangeScore(-22);
                     GameObject.Find("Studies Canvas").GetComponent<Clicker>().ExitMinigame3();
                     break;
                 case "Minigame4":
                     Debug.Log(whatIsGame.name);
-                    Scores.ChangeScore(-20);
+                    Scores.ChangeScore(-35);
                     GameObject.Find("ButtonsGame Canvas").GetComponent<ButtonsMinigame>().ExitMinigame4();
                     break;
             }
@@ -72,5 +79,21 @@ public class MinigamesTimer : MonoBehaviour
     void FixedUpdate()
     {
         TimerOut();
+    }
+
+    public static float GetTimerValue()
+    {
+        if(static_timercount > static_startTimer * 0.7)
+        {
+            return 1.5f;
+        }
+        else if(static_timercount > static_startTimer * 0.5)
+        {
+            return 1.3f;
+        }
+        else
+        {
+            return 1;
+        }
     }
 }

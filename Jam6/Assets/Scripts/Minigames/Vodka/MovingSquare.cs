@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -29,18 +30,19 @@ public class MovingSquare : MonoBehaviour
         rb.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0)) // движение куба вверх вниз
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         progressSlider.value = progress; // слайдер берёт значение (в рот)
-    }
-    void FixedUpdate()
-    {
         DoProgress(progressIsActive);
     }
+    // void FixedUpdate()
+    // {
+    //     DoProgress(progressIsActive);
+    // }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -66,7 +68,7 @@ public class MovingSquare : MonoBehaviour
             }
             else
             {
-                Scores.ChangeScore(50);
+                Scores.ChangeScore(Convert.ToInt32(65 * MinigamesTimer.GetTimerValue()));
                 ExitMinigame2();
                 Debug.Log("Win");
                 // прользователь победил и на него накидывается какой-то баф

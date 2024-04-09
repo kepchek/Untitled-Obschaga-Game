@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using System;
 
 public class Router : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class Router : MonoBehaviour
 
         IpAddressField.onValueChanged.AddListener(IpValueChanged);
 
-        RndIP = Random.Range(100000000, 999999999);
+        RndIP = UnityEngine.Random.Range(100000000, 999999999);
 
         TxtWithIP.text = RndIP.ToString("### ### ###").Replace(" ", ".");
 
@@ -71,14 +72,14 @@ public class Router : MonoBehaviour
         IpAddressField.Select();
         if(TxtWithIP.text == IpAddressField.text) 
         {
-            Scores.ChangeScore(10);
+            Scores.ChangeScore(Convert.ToInt32(25 * MinigamesTimer.GetTimerValue()));
             //BuffSystem.isBuffReady = true;
             ExitMinigame0();
         }
         else
         {
             ErrorTXT.SetActive(true);
-            Scores.ChangeScore(-10);
+            Scores.ChangeScore(-25);
             IpAddressField.text = "";
             IpAddressField.Select();
         }
